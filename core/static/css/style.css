@@ -1,0 +1,800 @@
+/* Formatação geral
+*************************************/
+
+* {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+#container{
+    width: 100%;
+    margin: 0 auto;
+    margin: 0 auto;
+    background: url(../imagens/paginaInicial/AllShapes.svg) no-repeat top;
+    background-size: 100% 95%;
+}
+
+a:link, a:active, a:visited{
+    color: #252A34;
+    text-decoration: none;
+}
+
+/* Logo
+**************************************/
+#logo h1{
+    margin-left: 161px;
+    float: left;
+}
+#logo a{
+    width: 170px;
+    height: 32px;
+    text-indent: -9999px;
+    display: block;
+    background: url(../imagens/logo/logo@dark.png) no-repeat;
+}
+
+/* Barra de navegação
+**************************************/
+header{
+    padding: 15px 0;
+    height: 186px;
+}
+
+nav ul{
+    width: 800px;
+    margin: 0 50px;
+    list-style: none;
+    float: right;
+    padding: 10px;
+}
+
+nav ul li{
+    float: left;
+}
+
+nav ul li a:link{
+    display: block;
+    margin-right: 25px;
+    margin-top: 15px;
+    padding-bottom: 3px;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover{
+    border-bottom: 3px solid #FF2E63;
+}
+
+nav div#botao{
+    float: left;
+    display: block;
+    margin-right: 25px;
+    margin-top: 5px;
+    padding-bottom: 3px;
+    border: none;
+}
+
+.botaoLogin{
+    width: 100px;
+    clear: both;
+    margin-left: 50px;
+    color: #FFF;
+    background-color: #FF2E63;
+    border: none;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.botaoLogin:hover{
+    background-color: #252A34;
+}
+
+/* Seção inicial
+**************************************/
+
+#secaoInicial{
+    display: flex;
+    width: 100%;
+    height: 1024px;
+}
+
+.identidadeVisual img{
+    width: 460px;
+    height: 406px;
+}
+
+#secaoInicial section#fraseEfeito{
+    width: 30%;
+    margin-left: 161px;
+    margin-top: 159px;
+}
+
+#secaoInicial .identidadeVisual img{
+    margin-left: 420px;
+    margin-top: 149px;
+}
+
+#secaoInicial section .botaoLogin{
+    width: 129px;
+    height: 46px;
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+#secaoInicial section .portfolio{
+    margin-top: 13px;
+    margin-right: 250px;
+}
+
+#secaoInicial div.redesSociais{
+    padding-top: 125px;
+}
+
+#secaoInicial div.redesSociais .box img{
+    margin-right: 60px;
+}
+
+#secaoInicial h1 {
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 63px;      
+}
+
+#secaoInicial p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;    
+}
+
+.secaoInicial-text {
+    margin-top: -70px;
+}
+/* Seção sobre
+**************************************/
+
+#secaoSobre{
+    display: flex;
+    width: 100%;
+    height: 838px;
+    margin: auto;
+    background: url(../imagens/sobre/shapes.svg) no-repeat top right;
+}
+
+#secaoSobre section#sobre{
+    width: 40%;
+    height: 600px;
+    margin-left: 111px;
+    padding: 50px;
+}
+
+#secaoSobre .identidadeVisual img{
+    margin-left: 390px;
+    margin-top: 140px;
+}
+
+#secaoSobre section .botaoLogin{
+    width: 129;
+    height: 46;
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+#secaoSobre div.redesSociais{
+    padding-top: 50px;
+}
+
+#secaoSobre div.redesSociais .box img{
+    margin-right: 60px;
+}
+
+#sobre h1 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+}
+
+#sobre p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+/* Seção serviços
+**************************************/
+
+#secaoServicos{
+    clear: both;
+    width: 100%;
+    height: 1024px;
+    display : flex;
+    margin: auto;
+    background: url(../imagens/servicos/shapes.svg) no-repeat top;
+}
+
+#secaoServicos section#servicos{
+    width: 100%;
+    height: 900px;
+}
+
+#secaoServicos section#servicos h1{
+    text-align: left;
+    width: 100%;
+    padding-left: 161px;
+    margin-top: -40px;
+}
+
+.cardServicos{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 100px;
+    width: 62%;
+}
+
+.servico{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#servicos h1 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+}
+
+#servicos h3 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;    
+}
+
+#servicos p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    /* text-align: justify;     */
+}
+/* Card 1
+-----------------------------------*/
+
+#secaoServicos section#servicos #card1{
+    width : 348px;
+    height : 341px;  
+    background-color : #252A34;
+        
+    display : flex;
+    flex-direction:column;
+    border-radius : 30px;
+    align-items : center;
+    justify-content : center;
+
+    margin-top: -120px;
+}
+
+#secaoServicos section#servicos #card1 img{
+    position : relative;
+    width : 170px;
+    height : 167px;
+  
+    top : -40%;
+    left: 8px;
+    z-index : 1;
+}
+
+#secaoServicos section#servicos #card1 .cardTxt{
+    position : relative;
+    top : -50px;
+    padding : 10px 15px;
+    color : #fff;
+    text-align : center;
+}
+
+/* Card 2
+-----------------------------------*/  
+
+#secaoServicos section#servicos #card2{
+    width : 348px;
+    height : 341px;  
+    background-color : #252A34;
+        
+    display : flex;
+    flex-direction : column;
+    border-radius : 30px;
+    align-items : center;
+    justify-content : center;
+
+    margin-top: 300px;
+}
+
+#secaoServicos section#servicos #card2 img{
+    position : relative;
+    width : 170px;
+    height : 167px;
+  
+    top : -40%;
+    left: 8px;
+    z-index : 1;
+}
+
+#secaoServicos section#servicos #card2 .cardTxt{
+    position : relative;
+    top : -50px;
+    padding : 10px 15px;
+    color : #fff;
+    text-align : center;
+}
+
+/* Card 3
+-----------------------------------*/
+#secaoServicos section#servicos #card3{
+    width : 348px;
+    height : 341px;  
+    background-color : #252A34;
+        
+    display : flex;
+    flex-direction : column;
+    border-radius : 30px;
+    align-items : center;
+    justify-content : center;
+}
+
+#secaoServicos section#servicos #card3 img{
+    position : relative;
+    width : 170px;
+    height : 167px;
+  
+    top : -40%;
+    left: 8px;
+    z-index : 1;
+}
+
+#secaoServicos section#servicos #card3 .cardTxt{
+    position : relative;
+    top : -50px;
+    padding : 10px 15px;
+    color : #fff;
+    text-align : center;
+}
+
+/* Seção portfólio
+**************************************/
+
+
+
+#secaoPortfolio{
+    clear: both;
+    width: 100%;
+    height: 1024px;
+    margin: auto;
+    background: url(../imagens/portfolio/Shapes.svg) no-repeat top;
+}
+
+/* @media only screen and (max-width: 600px) {
+   #secaoPortfolio{
+        margin-top: 150px !important;
+  } */
+
+#secaoPortfolio section#portfolio{
+    width: 100%;
+    height: 950px;
+    margin-top: 100px;
+}
+/* Portfolio Pedro */
+
+#secaoPortfolio .portfolio-h1{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 161px;
+
+}
+
+#secaoPortfolio {
+    /* width: 800px !important;
+     */
+     margin: auto;
+} 
+
+.cardsPortfolio {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.cardPortfolio {
+    background-color : #FF2E63;
+    border-radius: 30px;
+    max-width: 446.12px;
+    max-height: 212.62px;
+
+    display: flex;
+    align-items: center;
+}
+
+.card-portfolio-text {
+    padding-right: 27px;
+    border-left: 5px solid white ;
+    margin-left: -5px;
+}
+
+.card-portfolio-text h1 {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 10px;
+
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+
+    color: white;
+}
+
+.card-portfolio-text p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: white;
+    margin-left: 10px;
+}
+
+.cardsPortfolio2 {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    margin-left: 80px;
+
+}
+/* segundo card da primeira fileira */
+.segundo1 {
+    margin-top: 70px;
+}
+
+/* segundo card da segunda fileira */
+.segundo2 {
+    margin-top: 70px;
+    margin-left: 30px;
+}
+
+
+
+/* Seção depoimentos
+**************************************/
+
+#secaoDepoimentos{
+    clear: both;
+    width: 100%;
+    height: 1024px;
+    margin: auto;
+    margin-top: 150px;
+    background: url(../imagens/depoimentos/Shapes.svg) no-repeat bottom left;
+}
+
+#secaoDepoimentos h1 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+}
+
+#secaoDepoimentos section#depoimentos{
+    width: 100%;
+    height: 1000px;
+}
+
+#secaoDepoimentos h1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 161px;
+
+}
+
+/* depoimentos pedro */
+
+.container-depoimentos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.card-depoimento-depoimento-emmy {
+    border-left: #FFF solid 3px;
+    padding-left: 15px;
+}
+
+.card-depoimento-depoimento-ros {
+    border-left: #FFF solid 3px;
+    padding-left: 15px;
+}
+.card-depoimento-depoimento-waino {
+    border-left: #FFF solid 3px;
+    padding-left: 15px;
+}
+
+
+
+
+.card-depoimento {
+    max-width: 466px;
+    max-height: 195px;
+    background-color: #252A34;
+    color: white;
+    border-radius: 30px;
+
+    margin-top: 50px;
+}
+.card-depoimento-text {
+    display: flex;
+
+    margin-right: 28px;
+    margin-left: 28px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+.card-depoimento-text h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;   
+}
+.card-depoimento-text h4 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: -10px;    
+}
+.card-depoimento-text p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;    
+}
+.card-depoimento-depoimento-emmy {
+    display: flex;
+    margin-left: 30px;
+
+}
+.card-depoimento-depoimento-emmy img {
+    margin-right: -100px;
+    margin-top: -150px;
+    
+}
+
+.card-depoimento-depoimento-waino {
+    display: flex;
+    margin-left: 30px;
+
+}
+
+.card-depoimento-depoimento-ros {
+    display: flex;
+    margin-left: 30px;
+
+}
+
+.left-side-ros img {
+    margin-top: -110px;
+    margin-left: -60px;
+}
+
+.left-side-waino img {
+    margin-left: -90px;
+    margin-bottom: -15px;
+}
+
+.left-side-waino {
+    margin-right: 20px;
+}
+
+.container-depoimentos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#secaoDepoimentos {
+    max-width: 1366px !important;
+}
+
+/* Seção contato
+**************************************/
+
+#secaoContato{
+    width: 100%;
+    margin: auto;
+    background: url(../imagens/contato/Shapes\ \(1\).svg) no-repeat top right;
+
+}
+
+#secaoContato #contatosCabecalho{
+    width: 100%;
+}
+
+#secaoContato h1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 161px;
+}
+
+#secaoContato #contatosImagens{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#secaoContato #contatosImagens .contatosEmailTelEnde{
+    display: flex;
+}
+
+#secaoContato section#contato{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#secaoContato .contatosTxt{
+    margin-left: 10px;
+}
+
+#secaoContato .contatosTxt h4{
+    margin: 0;
+}
+
+
+/*  Formulario */
+#secaoContato #formulario-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+    margin: 0 50px;;
+}
+
+#secaoContato div#formulario{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 180px;
+}
+
+#formulario form{
+    width: 100%;
+}
+
+#secaoContato #formulario #formNomesTel{
+    display: flex;
+    justify-content: space-between;
+}
+
+#secaoContato div#formulario #formNomesTel .formNome{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+#secaoContato div#formulario #formNomesTel .formTel{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: -80px;
+}
+
+#secaoContato div#formulario #formEmail{
+    display: flex;
+    flex-direction: column;
+}
+
+#secaoContato div#formulario #formMensagem{
+    display: flex;
+    flex-direction: column;
+}
+
+#form-email-mensagem-container{
+    display: flex;
+    flex-direction: column;
+}
+
+#secaoContato div#formulario input{
+    border-style: none;
+    border: 2px solid #252A34;
+    border-radius: 30px;
+    /* width: 275px; */
+    height: 50px;
+}
+
+
+#secaoContato div#formulario #formEmail input{
+    width: 100%;
+    height: 50px;
+}
+
+#secaoContato div#formulario textarea{
+    border-radius: 30px;
+    width: 100%;
+    height: 253px;
+
+    border-style: none;
+    border: 2px solid #252A34;
+}
+
+#secaoContato #formulario form .botaoLogin{
+    margin: 20px 0 0 0;
+}
+
+/*DIV MAPA*/
+#secaoContato div#mapa{
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#secaoContato h1 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+}
+
+#secaoContato label span {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;    
+}
+
+form {
+    min-width: 400px;
+}
+
+
+/* Rodapé
+***************************************/
+
+footer{
+    width: 100%;
+    margin: auto;
+    clear: both;
+    padding: 20px 0 30px 0;
+    text-align: center;
+    background-color: #252A34;
+}
+footer p{
+    padding-top: 10px;
+    color: white;
+}
+
+footer div.redesSociais{
+    clear: both;
+}
+
+footer div.redesSociais .box img{
+    margin: 0 30px 0 30px;
+}
+
+#footerp {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;    
+}
+
+

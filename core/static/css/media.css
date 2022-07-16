@@ -1,0 +1,228 @@
+@media(max-width:800px){
+
+    body{
+        width: 100%;
+        height: 100%;
+    }
+
+    #container{
+        width: 100%;
+    }
+
+    /*Inicio*/
+    #secaoInicio{
+        flex-direction: column;
+        height: auto;
+    }
+
+    #secaoInicial section#fraseEfeito{
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #secaoInicial .identidadeVisual img{
+        width: 100%;
+        margin: 0;
+    }
+
+    /*Sobre*/
+    #secaoSobre{
+        flex-direction: column;
+        height: auto;
+        background: none;
+    }
+    #secaoSobre .identidadeVisual img{
+        width: 100%;
+        margin-left: 0;
+        margin-top: -100px;
+        margin-bottom: 100px;
+        background: url(../imagens/sobre/shapes.svg) no-repeat top right;
+        background-size: auto;
+    }
+    #secaoSobre section#sobre{
+        margin-left: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    /*Serviços*/
+    .cardServicos{
+        flex-direction: column;
+        margin-left: 0;
+        height: auto;
+    }
+    #servicos{
+        height: auto;
+        margin-top: 100px;
+    }
+    #secaoServicos section#servicos #card1{
+        width: 80%;
+    }
+    #secaoServicos section#servicos #card2{
+        width: 80%;
+        margin-top: 70px;
+    }
+    #secaoServicos section#servicos #card3{
+        width: 80%;
+        margin-top: 70px;
+    }
+    #secaoServicos{
+        height: auto;
+    }
+    #secaoServicos section#servicos h1{
+        padding-left: 20px;
+        font-size: 50px;
+        padding-bottom: 70px;
+    }
+    #secaoPortfolio{
+        margin-top: 400px;
+    }
+
+    /* Portfólio */
+
+    #secaoPortfolio{
+        flex-direction: column;
+        height: auto;
+    }
+
+    #secaoPortfolio .portfolio-h1{
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+    }
+
+    .cardsPortfolio2{
+        margin-left: 0;
+    }
+
+    /* segundo card da segunda fileira */
+    .segundo2 {
+        margin-left: 0;
+    }
+
+    /* Depoimentos */
+
+    #secaoDepoimentos h1{
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+
+        margin-top: 50px;
+    
+    }
+
+    /* Contato */
+    #secaoContato{
+        flex-direction: column;
+        height: auto;
+
+    }
+
+    #secaoContato div#formulario{
+        padding: 0;
+    }
+
+    #secaoContato section#contato{
+        flex-direction: column;
+    }
+
+    #secaoContato section #contatosCabecalho h1{
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        font-size: 32px;
+    }
+
+    #secaoContato #contatosImagens{
+        flex-direction: column;
+    }
+
+    #secaoContato #formulario #formNomesTel{
+        flex-direction: column;
+    }
+
+    #secaoContato div#formulario #formNomesTel .formNome{
+        width: 100%;
+    }
+
+    #secaoContato div#formulario #formNomesTel .formTel{
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #secaoContato div#mapa{
+        padding: 50px 0;
+    }
+
+    #contatosImagens {
+        display: flex !important;
+        flex-direction: column !important;
+        /* justify-content: center !important;     */
+        align-items: center !important;
+    }
+
+    #secaoContato h1 {
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+
+        margin-bottom: 50px !important;
+    }
+
+
+    /* font sizes mobile */
+    #secaoInicial h1 {
+        font-size: 32px;
+    }
+    #secaoInicial p {
+        font-size: 14px;
+    }
+    #secaoSobre h1 {
+        font-size: 28px;
+    }
+    #secaoSobre p {
+        font-size: 14px;
+    }
+    #secaoServicos h1 {
+        font-size: 28px !important;
+        margin-bottom: 40px !important;
+    }
+    #secaoServicos p {
+        font-size: 14px;
+    }
+    #secaoServicos h3 {
+        font-size: 16px;
+    }
+    #secaoPortfolio h1 {
+        font-size: 28px !important;
+    }
+    #secaoPortfolio .card-portfolio-text h1 {
+        font-size: 18px !important;
+    }
+    .card-portfolio-text p {
+        font-size: 14px;
+    }
+    #secaoDepoimentos h1 {
+        font-size: 28px !important;
+    }
+    #secaoDepoimentos h3 {
+        font-size: 18px;
+    }
+    #secaoDepoimentos h4 {
+        font-size: 16px;
+    }
+    #secaoDepoimentos p {
+        font-size: 14px;
+    }
+    #secaoContato h1 {
+        font-size: 28px !important;
+    }
+  
+
+    /* footer */
+    #footerp {
+        font-size: 14px !important;
+    }
+
+}
+

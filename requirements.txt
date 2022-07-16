@@ -1,0 +1,3 @@
+django
+Pillow
+django_svg_image_form_field

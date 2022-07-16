@@ -1,0 +1,75 @@
+body, 
+html{
+    font-family: 'montserrat', sans-serif;
+    font-style: normal;
+    background: url(../img/paginaprincipal.svg) no-repeat top;
+    background-size: 100%;
+}
+
+a{
+    color: var(--primary);
+    text-decoration: none;
+}
+
+#header{
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+    transition: background ease-out 0.2s;
+}
+
+#header .navbar-collapse{
+    padding-left: 25%;
+}
+
+#header .nav-link{
+    font-weight: 600;
+    font-size: 18px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: var(--primary);
+    border-bottom: solid 4px transparent;
+}
+
+#header .nav-link:hover{
+    border-bottom: solid 4px var(--secondary);
+    color: var(--secondary);
+
+}
+
+
+
+#paginainicial{
+    padding-top: 10%;
+}
+
+#paginainicial h1{
+    font-weight: 700;
+}
+
+#paginainicial h4{
+    font-size: 18px;
+}
+
+#paginainicial{
+    padding-top: 10%;
+}
+
+#paginainicial h1{
+    font-weight: 700;
+}
+
+#paginainicial h4{
+    font-size: 18px;
+}
+
+#sobre{
+    margin-top: 25%;
+}
+#sobre h1{
+    font-weight: 700;
+    font-size: 36px;
+}

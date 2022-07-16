@@ -1,0 +1,355 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+        <!--Normalize CSS-->
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}"/>
+        <!--Estilo customizado-->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/media.css' %}">
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+        <title>Dissemina</title>
+    </head>
+
+    <body>
+        <!--Inico container-->
+        <div id="container">
+            <div id="background">
+                <header>
+                    <div id="logo">
+                        <h1><a href="">Dissemina</a></h1>
+                    </div>
+                    <!--Inico menu-->
+                    <nav>
+                        <ul>
+                            <li><a href="#secaoInicial">Home</a></li>
+                            <li><a href="#secaoSobre">Quem somos</a></li>
+                            <li><a href="#secaoServicos">Serviços</a></li>
+                            <li><a href="#secaoDepoimentos">Depoimentos</a></li>
+                            <li><a href="#secaoContato">Contato</a></li>
+                            <li>
+                                <div id="botao">
+                                    <button type="button" class="botaoLogin">Login</button>
+                            </li>
+                        </ul>
+                </div>
+                </nav>
+                <!--Fim menu-->
+                </header>
+
+                <!--Inicio seção inicial-->
+                <div id="secaoInicial">
+                    <section id="fraseEfeito">
+                        <div class="secaoInicial-text">
+                        <h1 class="display-4">Lorem ipsum <span style="color: #FF2E63">dolor sit</span> amet</h1>
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                        </div>
+                        <button type="button" class="botaoLogin">{{ inicio.texto_button }}</button>
+                        <p class="portfolio float-right lead">Portfólio <a href="#secaoPortfolio"><img src="{% static 'imagens/arrow.svg' %}" alt="arrow"></a>
+                        </p>
+                        <div class="redesSociais">
+                            <div class="box">
+                                <a href="#"><img src="{% static 'imagens/bi_facebook.svg' %}" alt="facebook"></a>
+                                <a href="#"><img src="{% static 'imagens/bi_instagram.svg' %}" alt="instagram"></a>
+                                <a href="#"><img src="{% static 'imagens/bi_youtube.svg' %}" alt="youtube"></a>
+                            </div>
+                        </div>     
+                    </section>
+                    <section class="identidadeVisual">
+                        <img src="imagens/paginaInicial/mainIllustration.svg" alt="identidadeVisual1">
+                    </section>
+                </div>
+            </div>
+            <!--Fim seção inicial-->
+
+            <!--Inicio sobre-->
+            <div id="secaoSobre">
+                <section id="sobre">
+                    <h1 class="display-4"><span style="border-bottom: 5px solid #FF2E63;">Sobr</span>e</h1>
+                    <p class="lead">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam, eu amet quisque massa augue.
+                        Integer sit platea condimentum posuere quam venenatis. Eu id fusce velit mattis egestas mauris id in.
+                        Egestas phasellus est ut ut vitae. Adipiscing pulvinar ac eu proin quam orci. Fringilla id non, lacus
+                        metus in sodales. Massa velit sed id aliquet non et suspendisse habitant. Nunc mauris accumsan id duis
+                        mattis elit nunc, consectetur in. Dictum tempus enim, adipiscing egestas metus consequat pharetra.
+                    </p>
+                    <div class="redesSociais">
+                        <div class="box">
+                            <a href="#"><img src="{% static 'imagens/bi_facebook.svg' %}" alt="facebook"></a>
+                            <a href="#"><img src="{% static 'imagens/bi_instagram.svg' %}" alt="instagram"></a>
+                            <a href="#"><img src="{% static 'imagens/bi_youtube.svg' %}" alt="youtube"></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="identidadeVisual">
+                    <img src="{{ sobre.image.url }}" alt="identidadeVisual2">
+                </section>
+            </div>
+            <!--Fim sobre-->
+
+            <!--Inicio serviços-->
+            <div id="secaoServicos">
+                <section id="servicos" class="servico">
+                    <h1 class="display-4"><span style="border-bottom: 5px solid #FF2E63;">Nosso</span><span style="color: #FF2E63"> serviços</span></h1>
+                    <div class="cardServicos">
+
+                        {% for i in servicos %}
+                        {% if forloop.counter0 == 0 %}
+                        <div id="card1">
+                            {% elif forloop.counter0 == 1 %}
+                            <div id="card2">
+                                {% else %}
+                                <div id="card3">
+                                    {% endif %}
+                            <div class="cardImg">
+                                <img src="{{i.image.url}}" alt="">
+                            </div>
+                            <div class="cardTxt">
+                                <h3>{{i.subtitulo}}</h3>
+                                <p>{{i.descricao}}</p>
+                            </div>
+                            {% if forloop.counter0 == 0 %}
+                            </div>
+                                {% elif forloop.counter0 == 1 %}
+                                </div>
+                                    {% else %}
+                                </div>
+                                        {% endif %}
+                        {% endfor %}
+                    </div>
+
+                </section>
+            </div>
+            <!--Fim serviços-->
+
+            <!--Inicio portfólio-->
+            <div id="secaoPortfolio">
+                <h1 class="portfolio-h1 display-4"><span style="border-bottom: 5px solid #FF2E63;">Portfóli</span>o</h1>
+                <section id="portfolio">
+                     <div class="cardsPortfolio">
+                        <div class="cardPortfolio primeiro2">
+                            <img src="imagens/portfolio/Livro.svg" alt="">
+                            <div class="card-portfolio-text">
+                                <h1 class="displat-4">Livros</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At.</p>
+                            </div>
+                        
+                        </div>
+
+                            <div class="cardPortfolio segundo1">
+                                <img src="imagens/portfolio/Video.svg" alt="">
+                                <div class="card-portfolio-text">
+                                    <h1 class="displat-4">Video Aulas</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At.</p>
+                                </div>
+                            
+                            </div>
+                        
+                     </div>
+
+                     <div class="cardsPortfolio2">
+                        <div class="cardPortfolio">
+                            <img src="imagens/portfolio/Video.svg" alt="">
+                            <div class="card-portfolio-text">
+                                <h1 class="displat-4">Video Aulas</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At.</p>
+                            </div>
+                        
+                        </div>
+
+                            <div class="cardPortfolio segundo2">
+                                <img src="imagens/portfolio/Livro.svg" alt="">
+                                <div class="card-portfolio-text">
+                                    <h1 class="displat-4">Livros</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At.</p>
+                                </div>
+                            
+                            </div>
+                     </div>
+                </section>
+
+            </div>
+            <!--Fim portfólio-->
+
+            <!--Inicio depoimentos-->
+            <div id="secaoDepoimentos">
+                <h1><span style="border-bottom: 5px solid #FF2E63;">Depoim</span>entos</h1>
+                <section id="depoimentos">
+
+                    <div class="container-depoimentos">
+                        <div class="card-depoimento dep-emmy">
+
+                            <div class="card-depoimento-text">
+                                <div class="left-side">
+                                    
+                                    <div class="card-depoimento-pessoa">
+                                        <h3>Emmy Feil</h3>
+                                        <h4>Aluna</h4>
+                                    </div>
+                                </div>
+                                <div class="card-depoimento-depoimento-emmy">
+                                    
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim et quis pharetra vitae mi elit. Arcu, iaculis fusce mauris posuere gravida a. Nam suspendisse netus.</p>
+                                    <img src="imagens\depoimentos\blob.svg" id="emmy"alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                            <div class="card-depoimento dep-ros">
+    
+                                <div class="card-depoimento-text">
+                                    <div class="left-side-ros">
+                                        <img src="imagens\depoimentos\blob-1.svg" id="emmy"alt="">
+                                        <div class="card-depoimento-pessoa">
+                                            <h3>Rosalind Sporer</h3>
+                                            <h4>Aluna</h4>
+                                        </div>
+                                    </div>
+                                    <div class="card-depoimento-depoimento-ros">
+                                        
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim et quis pharetra vitae mi elit. Arcu, iaculis fusce mauris posuere gravida a. Nam suspendisse netus.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-depoimento dep-waino">
+    
+                                <div class="card-depoimento-text">
+                                    <div class="left-side-waino">
+                                     
+                                        <div class="card-depoimento-pessoa">
+                                            <h3>Waino Spinka</h3>
+                                            <h4>Professor</h4>
+                                        </div>
+                                        <img src="imagens\depoimentos\blob-1.svg" id="emmy"alt="">
+                                    </div>
+                                    <div class="card-depoimento-depoimento-waino">
+                                        
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim et quis pharetra vitae mi elit. Arcu, iaculis fusce mauris posuere gravida a. Nam suspendisse netus.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </section>
+
+            </div>
+            <!--Fim depoimentos-->
+
+            <!--Inicio contato-->
+            <div id="secaoContato">
+                <section id="contatosCabecalho">
+                    <h1 class="display-4"><span style="border-bottom: 5px solid #FF2E63;">Mande um</span>a <span style="color: #FF2E63">mensagem</span></h1>
+                    <div id="contatosImagens">
+                        <div class="contatosEmailTelEnde">
+                           <div class="contatosImg">
+                                <img src="imagens/contato/mail.svg" alt="email">
+                           </div>
+                           <div class="contatosTxt">
+                                <h4>EMAIL</h4>
+                                <p style="color: #FF2E63">contato@gmail.com</p>
+                           </div>
+                        </div>
+                        <div class="contatosEmailTelEnde">
+                            <div class="contatosImg">
+                                 <img src="imagens/contato/phone.svg" alt="Telefone">
+                            </div>
+                            <div class="contatosTxt">
+                                 <h4>TELEFONE</h4>
+                                 <p style="color: #FF2E63">(00) 0000-0000</p>
+                            </div>
+                        </div>
+                        <div class="contatosEmailTelEnde">
+                            <div class="contatosImg">
+                                <img src="imagens/contato/localiza.svg" alt="Localização">
+                            </div>
+                            <div class="contatosTxt">
+                                <h4>ENDEREÇO</h4>
+                                <p style="color: #FF2E63">Rua X. navio, 000</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="contato">
+                    <div id="formulario-container">
+                        <div id="formulario">
+                            <form>
+                                <div id="formNomesTel">
+                                    <div class="formNome">
+                                        <label for="nome"><span class="lead" style="color: #FF2E63">Nome</span></label>
+                                        <input type="text" id="nome" name="nome" required>
+                                    </div>
+                                    <div class="formTel">
+                                        <label for="telefone"><span class="lead" style="color: #FF2E63">Telefone</span></label>
+                                        <input type="tel" id="telefone" name="telefone" required>
+                                    </div>
+                                </div>
+                                <div id="form-email-mensagem-container">
+                                    <div id="formEmail">
+                                        <label for="email"><Span class="lead" style="color: #FF2E63">Email</Span></label><br>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                    <div id="formMensagem">
+                                        <label for="mensagem"><span class="lead" style="color: #FF2E63">Mensagem</span></label><br>
+                                        <textarea name="mensagem" id="mensagem" cols="30" rows="10" required></textarea>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="botaoLogin">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="mapa">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15876.34664363448!2d-35.1993953!3d-5.8434097!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x20c4bb30f68e7bc3!2sECT%2FUFRN%20-%20Escola%20de%20Ci%C3%AAncias%E2%80%8B%20e%20Tecnologia!5e0!3m2!1spt-PT!2sbr!4v1657663767473!5m2!1spt-PT!2sbr" 
+                            width="479px" 
+                            height="466px"
+                            style="border-radius: 60px; border: none;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                </section>
+            </div>
+            <!--Fim contato-->
+
+            <!--Inicio Footer-->
+            <footer>
+                <img src="imagens/logo/logo@dark.png" alt="footer">
+                <p id="footerp"class="lead">desenvolvido pela EJECT</p>
+                <div class="redesSociais">
+                    <div class="box">
+                        <a href="#"><img src="imagens/footer/bi_facebook.svg" alt="facebook"></a>
+                        <a href="#"><img src="imagens/footer/bi_instagram.svg" alt="instagram"></a>
+                        <a href="#"><img src="imagens/footer/bi_youtube.svg" alt="youtube"></a>
+                    </div>
+                </div>
+            </footer>
+            <!--Fim Footer-->
+
+            <!--Fim container-->
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+
+</html>
