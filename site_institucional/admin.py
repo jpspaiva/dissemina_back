@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .forms import DepoimentosForm, SobreForm, ServicosForm, PortfolioForm
+from .forms import DepoimentosForm, SobreForm, ServicosForm, PortfolioForm, InicioForm
 
 from .models import Footer, Inicio, Sobre, Servicos, Portfolio, Depoimentos, Contato, FormContato
 
@@ -26,6 +26,7 @@ class DepoimentosFormAdmin(admin.ModelAdmin):
 
 class InicioAdmin(admin.ModelAdmin):
     list_display = ('id', 'titulo')
+    form = InicioForm
 
 
 admin.site.register(Inicio, InicioAdmin)

@@ -37,7 +37,6 @@
         margin-top: -100px;
         margin-bottom: 100px;
         background: url(../imagens/sobre/shapes.svg) no-repeat top right;
-        background-size: auto;
     }
     #secaoSobre section#sobre{
         margin-left: 0;
@@ -83,6 +82,8 @@
     #secaoPortfolio{
         flex-direction: column;
         height: auto;
+        background: url(../imagens/portfolio/Shapes.svg) no-repeat center;
+        background-size: 130%;
     }
 
     #secaoPortfolio .portfolio-h1{
@@ -115,6 +116,7 @@
     #secaoContato{
         flex-direction: column;
         height: auto;
+        background: url(../imagens/contato/Shapes\ \(1\).svg) no-repeat center;
 
     }
 
@@ -177,11 +179,11 @@
     #secaoInicial p {
         font-size: 14px;
     }
-    #secaoSobre h1 {
-        font-size: 28px;
+    #sobre-section h1 {
+        font-size: 28px !important;
     }
-    #secaoSobre p {
-        font-size: 14px;
+    #sobre-section p {
+        font-size: 14px !important;
     }
     #secaoServicos h1 {
         font-size: 28px !important;
@@ -226,3 +228,176 @@
 
 }
 
+/* rayani */
+/* old global */
+h1, h2, h3, h4, h5, h6{
+    font-weight: 700;
+}
+
+a {
+    color: #252A34;
+}
+
+a:hover {
+    color: #252A34;
+}
+
+.button {
+    font-weight: 700;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+}
+
+.button-primary {
+    background-color: #FF2E63;
+    color: white;
+    border: none;
+    border-radius: 30px;
+}
+
+.button-primary:hover {
+    background-color: #252A34;
+    color: white;
+}
+
+.button-secondary {
+    border: none;
+    color: #252A34;
+    background-color: transparent;
+}
+
+.button-secondary:hover {
+    background-color: transparent;
+    color: #FF2E63;
+}
+
+
+/* old custom */
+
+body,
+html {
+    font-family: 'montserrat', sans-serif !important;
+    font-style: normal !important;
+    background: url(../img/paginaprincipal.svg) no-repeat top !important;
+    background-size: 100% !important;
+}
+
+#header {
+    display: flex !important;
+    width: 100% !important;
+    background-color: transparent !important;
+}
+
+#header .navbar-collapse {
+    padding-left: 20% !important;
+}
+
+#header .nav-link {
+    font-weight: 600 !important;
+    font-size: 18px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-top: 5px !important;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+    color: #252A34 !important;
+    border-bottom: solid 4px transparent !important;
+}
+
+#header .nav-link:hover {
+    border-bottom: solid 4px #FF2E63 !important;
+    color: #FF2E63 !important;
+
+}
+
+#paginainicial {
+    padding-top: 10% !important;
+}
+
+#sobre {
+    margin-top: 25% !important;
+}
+
+#sobre h1 {
+    font-weight: 700 !important;
+}
+
+#servicos {
+    margin-top: 15% !important;
+    /* background: url(../img/servoços.svg) no-repeat top !important; */
+}
+
+/* old responsive */
+
+@media(min-width: 992px) {
+
+    #header .nav-link {
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+    }
+
+    .navmobile {
+        display: none !important;
+    }
+
+    .menumobile {
+        display: none !important;
+    }
+
+    .sumir {
+        display: block !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .menumobile {
+        width: 50px !important;
+        height: 100% !important;
+        background-color: #252A34 !important;
+        display: block !important;
+        border: none !important;
+        background: none !important;
+    }
+
+    .menumobile:focus {
+        outline: none !important;
+    }
+
+    .sumir {
+        display: none !important;
+    }
+
+    .redesocial {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+}
+
+/* pedro */
+#paginainicial p {
+    font-size: 18px !important;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+#paginainicial .login {
+    color: #fff !important;
+}
+
+#header a {
+    text-transform: capitalize !important;
+}
+
+@media (max-width: 800px) {
+    #sobre-section #sobre-h1 {
+        font-size: 28px !important;
+    }
+    #sobre-section  #sobre-p {
+        font-size: 14px !important;
+        font-weight: 400;
+        line-height: 150%;
+    }
+}

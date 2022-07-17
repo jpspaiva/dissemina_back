@@ -18,7 +18,7 @@ class Inicio(models.Model):
 class Sobre(models.Model):
     image = models.ImageField(verbose_name='Imagem Sobre', upload_to='sobre')
     titulo = models.CharField(verbose_name='Titulo Sobre', max_length=250)
-    descicao = models.TextField(verbose_name='Descricao Sobre')
+    descricao = models.TextField(verbose_name='Descricao Sobre')
 
     def __str__(self):
         return f'{self.titulo}'

@@ -1,8 +1,15 @@
 from django import forms
 
-from .models import Sobre, Servicos, Portfolio, Depoimentos
+from .models import Inicio, Sobre, Servicos, Portfolio, Depoimentos
 from django_svg_image_form_field import SvgAndImageFormField
 
+class InicioForm(forms.ModelForm):
+    class Meta:
+        model = Inicio
+        exclude = []
+        field_classes = {
+            'image': SvgAndImageFormField,
+        }
 
 class SobreForm(forms.ModelForm):
     class Meta:
