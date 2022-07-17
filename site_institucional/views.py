@@ -3,7 +3,9 @@ from django.shortcuts import render
 
 from .models import Inicio, Sobre, Servicos, Portfolio, Depoimentos, Contato, FormContato
 
-# Create your views here. 
+# Create your views here.
+
+
 def index(request):
 
     inicio = Inicio.objects.last()
@@ -28,10 +30,10 @@ def index(request):
         nome_form = request.POST['nome']
         telefone_form = request.POST['telefone']
         email_form = request.POST['email']
-        texto_form = request.POST['texto']
+        texto_form = request.POST['mensagem']
 
-        form = FormContato(nome=nome_form, telefone=telefone_form, email=email_form, texto=texto_form)
+        form = FormContato(nome=nome_form, telefone=telefone_form,
+                           email=email_form, mensagem=texto_form)
         form.save()
 
     return render(request, 'index.html', context)
-

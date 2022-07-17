@@ -136,21 +136,23 @@
             <div id="secaoPortfolio">
                 <h1 class="portfolio-h1 display-4"><span style="border-bottom: 5px solid #FF2E63;">Portfóli</span>o</h1>
                 <section id="portfolio">
+                    
                      <div class="cardsPortfolio">
+                        
                         <div class="cardPortfolio primeiro2">
-                            <img src="imagens/portfolio/Livro.svg" alt="">
+                            <img src="{{ portfolio.0.image.url }}" alt="">
                             <div class="card-portfolio-text">
-                                <h1 class="displat-4">Livros</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At.</p>
+                                <h1 class="displat-4">{{ portfolio.0.titulo }}</h1>
+                                <p>{{ portfolio.0.descricao }}</p>
                             </div>
                         
                         </div>
 
                             <div class="cardPortfolio segundo1">
-                                <img src="imagens/portfolio/Video.svg" alt="">
+                                <img src="{{ portfolio.1.imagem.url }}" alt="">
                                 <div class="card-portfolio-text">
-                                    <h1 class="displat-4">Video Aulas</h1>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At.</p>
+                                    <h1 class="displat-4">{{ portfolio.1.titulo }}</h1>
+                                    <p>{{ portfolio.1.descricao }}</p>
                                 </div>
                             
                             </div>
@@ -159,19 +161,19 @@
 
                      <div class="cardsPortfolio2">
                         <div class="cardPortfolio">
-                            <img src="imagens/portfolio/Video.svg" alt="">
+                            <img src="{{ portfolio.2.image.url }}" alt="">
                             <div class="card-portfolio-text">
-                                <h1 class="displat-4">Video Aulas</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At.</p>
+                                <h1 class="displat-4">{{ portfolio.2.titulo }}</h1>
+                                <p>{{ portfolio.2.descricao }}</p>
                             </div>
                         
                         </div>
 
                             <div class="cardPortfolio segundo2">
-                                <img src="imagens/portfolio/Livro.svg" alt="">
+                                <img src="{{ portfolio.3.image.url }}" alt="">
                                 <div class="card-portfolio-text">
-                                    <h1 class="displat-4">Livros</h1>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At.</p>
+                                    <h1 class="displat-4">{{ portfolio.3.titulo }}</h1>
+                                    <p>{{ portfolio.3.descricao }}</p>
                                 </div>
                             
                             </div>
@@ -193,14 +195,14 @@
                                 <div class="left-side">
                                     
                                     <div class="card-depoimento-pessoa">
-                                        <h3>Emmy Feil</h3>
-                                        <h4>Aluna</h4>
+                                        <h3>{{ depoimentos.0.cliente }}</h3>
+                                        <h4>{{ depoimentos.0.ocupcliente }}</h4>
                                     </div>
                                 </div>
                                 <div class="card-depoimento-depoimento-emmy">
                                     
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim et quis pharetra vitae mi elit. Arcu, iaculis fusce mauris posuere gravida a. Nam suspendisse netus.</p>
-                                    <img src="imagens\depoimentos\blob.svg" id="emmy"alt="">
+                                    <p>{{ depoimentos.0.depoimento }}</p>
+                                    <img src="{{ depoimentos.0.image.url }}" id="emmy"alt="">
                                 </div>
                             </div>
                         </div>
@@ -209,15 +211,15 @@
     
                                 <div class="card-depoimento-text">
                                     <div class="left-side-ros">
-                                        <img src="imagens\depoimentos\blob-1.svg" id="emmy"alt="">
+                                        <img src="{{ depoimentos.1.image.url }}" id="emmy"alt="">
                                         <div class="card-depoimento-pessoa">
-                                            <h3>Rosalind Sporer</h3>
-                                            <h4>Aluna</h4>
+                                            <h3>{{depoimentos.1.cliente}}</h3>
+                                            <h4>{{depoimentos.1.ocupcliente}}</h4>
                                         </div>
                                     </div>
                                     <div class="card-depoimento-depoimento-ros">
                                         
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim et quis pharetra vitae mi elit. Arcu, iaculis fusce mauris posuere gravida a. Nam suspendisse netus.</p>
+                                        <p>{{depoimentos.1.depoimento}}</p>
 
                                     </div>
                                 </div>
@@ -229,14 +231,14 @@
                                     <div class="left-side-waino">
                                      
                                         <div class="card-depoimento-pessoa">
-                                            <h3>Waino Spinka</h3>
-                                            <h4>Professor</h4>
+                                            <h3>{{depoimentos.2.cliente}}</h3>
+                                            <h4>{{depoimentos.2.depoimento}}</h4>
                                         </div>
-                                        <img src="imagens\depoimentos\blob-1.svg" id="emmy"alt="">
+                                        <img src="{{ depoimentos.2.image.url }}" id="emmy"alt="">
                                     </div>
                                     <div class="card-depoimento-depoimento-waino">
                                         
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim et quis pharetra vitae mi elit. Arcu, iaculis fusce mauris posuere gravida a. Nam suspendisse netus.</p>
+                                        <p>{{depoimentos.2.depoimento}}</p>
 
                                     </div>
                                 </div>
@@ -254,36 +256,36 @@
                     <div id="contatosImagens">
                         <div class="contatosEmailTelEnde">
                            <div class="contatosImg">
-                                <img src="imagens/contato/mail.svg" alt="email">
+                                <img src="{% static 'imagens/contato/mail.svg' %}" alt="email">
                            </div>
                            <div class="contatosTxt">
                                 <h4>EMAIL</h4>
-                                <p style="color: #FF2E63">contato@gmail.com</p>
+                                <p style="color: #FF2E63">{{contato.email}}</p>
                            </div>
                         </div>
                         <div class="contatosEmailTelEnde">
                             <div class="contatosImg">
-                                 <img src="imagens/contato/phone.svg" alt="Telefone">
+                                 <img src="{% static 'imagens/contato/phone.svg'%}" alt="Telefone">
                             </div>
                             <div class="contatosTxt">
                                  <h4>TELEFONE</h4>
-                                 <p style="color: #FF2E63">(00) 0000-0000</p>
+                                 <p style="color: #FF2E63">{{contato.telefone}}</p>
                             </div>
                         </div>
                         <div class="contatosEmailTelEnde">
                             <div class="contatosImg">
-                                <img src="imagens/contato/localiza.svg" alt="Localização">
+                                <img src="{% static 'imagens/contato/localiza.svg'%}" alt="Localização">
                             </div>
                             <div class="contatosTxt">
                                 <h4>ENDEREÇO</h4>
-                                <p style="color: #FF2E63">Rua X. navio, 000</p>
+                                <p style="color: #FF2E63">{{contato.endereco}}</p>
                         </div>
                     </div>
                 </section>
                 <section id="contato">
                     <div id="formulario-container">
                         <div id="formulario">
-                            <form>
+                            <form method="POST"> {% csrf_token %}
                                 <div id="formNomesTel">
                                     <div class="formNome">
                                         <label for="nome"><span class="lead" style="color: #FF2E63">Nome</span></label>
@@ -326,13 +328,13 @@
 
             <!--Inicio Footer-->
             <footer>
-                <img src="imagens/logo/logo@dark.png" alt="footer">
+                <img src="{% static 'imagens/logo/logo@dark.png'%}" alt="footer">
                 <p id="footerp"class="lead">desenvolvido pela EJECT</p>
                 <div class="redesSociais">
                     <div class="box">
-                        <a href="#"><img src="imagens/footer/bi_facebook.svg" alt="facebook"></a>
-                        <a href="#"><img src="imagens/footer/bi_instagram.svg" alt="instagram"></a>
-                        <a href="#"><img src="imagens/footer/bi_youtube.svg" alt="youtube"></a>
+                        <a href="{{footer.facebook}}"><img src="{% static 'imagens/footer/bi_facebook.svg'%}" alt="facebook"></a>
+                        <a href="{{footer.instagram}}"><img src="{% static 'imagens/footer/bi_instagram.svg" alt="instagram'%}"></a>
+                        <a href="{{footer.youtube}}"><img src="{% static 'imagens/footer/bi_youtube.svg" alt="youtube'%}"></a>
                     </div>
                 </div>
             </footer>
